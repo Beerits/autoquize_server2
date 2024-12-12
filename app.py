@@ -13,7 +13,7 @@ nltk.download('stopwords')
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
 # Ensure spaCy model is downloaded
 def ensure_spacy_model():
     model_name = "en_core_web_md"
